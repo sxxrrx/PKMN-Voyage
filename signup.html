@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Create your PKMN Voyage Trainer account and begin your journey across the Pokémon world."
+    >
+
+    <title>Create Account | PKMN Voyage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="auth-page">
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div class="logo">
+            <a href="index.html">
+                <h1>PKMN Voyage</h1>
+            </a>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Log In</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         SIGN UP
+    ====================================================== -->
+
+    <main class="auth-main">
+
+        <section class="auth-section">
+
+            <div class="auth-card">
+
+                <!-- Decorative Poké Ball -->
+
+                <div
+                    class="auth-pokeball"
+                    aria-hidden="true"
+                ></div>
+
+
+                <!-- Heading -->
+
+                <div class="auth-heading">
+
+                    <p class="auth-eyebrow">
+                        Trainer Registration
+                    </p>
+
+                    <h2>
+                        Begin Your Journey
+                    </h2>
+
+                    <p>
+                        Create your PKMN Voyage account.
+                        Your Trainer adventure starts here.
+                    </p>
+
+                </div>
+
+
+                <!-- Account Form -->
+
+                <form
+                    id="signup-form"
+                    class="auth-form"
+                >
+
+
+                    <!-- Username -->
+
+                    <div class="form-group">
+
+                        <label for="username">
+                            Trainer Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Choose a Trainer name"
+                            minlength="3"
+                            maxlength="20"
+                            autocomplete="username"
+                            required
+                        >
+
+                        <small>
+                            This will be the name other Trainers see.
+                        </small>
+
+                    </div>
+
+<!-- Home Region -->
+
+<div class="form-group">
+
+    <label for="home-region">
+        Home Region
+    </label>
+
+    <select
+        id="home-region"
+        name="home-region"
+        required
+    >
+        <option value="" selected disabled>
+            Select your home region
+        </option>
+
+        <option value="kanto">Kanto</option>
+        <option value="johto">Johto</option>
+        <option value="hoenn">Hoenn</option>
+        <option value="sinnoh">Sinnoh</option>
+        <option value="unova">Unova</option>
+        <option value="kalos">Kalos</option>
+        <option value="alola">Alola</option>
+        <option value="galar">Galar</option>
+        <option value="paldea">Paldea</option>
+      <option value="virelia">Virelia</option>
+    </select>
+
+    <small>
+        This is where your Trainer is originally from.
+        Your League journey will begin in Kanto.
+    </small>
+
+</div>
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="trainer@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="password-field">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-password-toggle="password"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                        <small>
+                            Use at least 8 characters.
+                        </small>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="form-group">
+
+                        <label for="confirm-password">
+                            Confirm Password
+                        </label>
+
+                        <div class="password-field">
+
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                name="confirm-password"
+                                placeholder="Enter your password again"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-password-toggle="confirm-password"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Terms -->
+
+                    <div class="form-check">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            required
+                        >
+
+                        <label for="terms">
+
+                            I agree to the
+
+                            <a href="terms.html">
+                                Terms of Service
+                            </a>
+
+                            and
+
+                            <a href="privacy.html">
+                                Privacy Policy
+                            </a>.
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Error Message -->
+
+                    <div
+                        id="signup-error"
+                        class="form-message form-error hidden"
+                        role="alert"
+                    ></div>
+
+
+                    <!-- Success Message -->
+
+                    <div
+                        id="signup-success"
+                        class="form-message form-success hidden"
+                    ></div>
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+                        Create Trainer Account
+                    </button>
+
+                </form>
+
+
+                <!-- Existing Account -->
+
+                <div class="auth-footer">
+
+                    <p>
+                        Already have a Trainer account?
+                        <a href="login.html">
+                            Log In
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Side Information -->
+
+            <aside class="auth-info">
+
+                <p class="auth-eyebrow">
+                    Your Adventure Awaits
+                </p>
+
+                <h2>
+                    One Trainer.<br>
+                    Every Region.
+                </h2>
+
+                <p>
+                    Your journey begins in Kanto, but it won't end there.
+                    Earn badges, discover Pokémon, meet other Trainers,
+                    and unlock new regions as your adventure grows.
+                </p>
+
+
+                <div class="auth-journey">
+
+                    <div class="journey-step">
+                        <span>01</span>
+
+                        <div>
+                            <strong>Create Your Account</strong>
+                            <p>Register your Trainer profile.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="journey-step">
+                        <span>02</span>
+
+                        <div>
+                            <strong>Create Your Trainer</strong>
+                            <p>
+                                Choose your appearance and home region.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="journey-step">
+                        <span>03</span>
+
+                        <div>
+                            <strong>Begin in Kanto</strong>
+                            <p>
+                                Meet Professor Oak and choose your first partner.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="journey-step">
+                        <span>04</span>
+
+                        <div>
+                            <strong>Explore the World</strong>
+                            <p>
+                                Earn badges and unlock your next destination.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            PKMN Voyage
+        </p>
+
+        <p>
+            PKMN Voyage is a fan-made project and is not affiliated with,
+            endorsed by, or sponsored by Nintendo, Game Freak, or
+            The Pokémon Company.
+        </p>
+
+    </footer>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
