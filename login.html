@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Log in to your PKMN Voyage Trainer account."
+    >
+
+    <title>Log In | PKMN Voyage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="auth-page">
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div class="logo">
+            <a href="index.html">
+                <h1>PKMN Voyage</h1>
+            </a>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Create Account</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         LOGIN
+    ====================================================== -->
+
+    <main class="auth-main">
+
+        <section class="auth-section">
+
+            <div class="auth-card">
+
+                <div
+                    class="auth-pokeball"
+                    aria-hidden="true"
+                ></div>
+
+
+                <div class="auth-heading">
+
+                    <p class="auth-eyebrow">
+                        Trainer Login
+                    </p>
+
+                    <h2>
+                        Welcome Back, Trainer
+                    </h2>
+
+                    <p>
+                        Log in to continue your PKMN Voyage journey.
+                    </p>
+
+                </div>
+
+
+                <!-- LOGIN FORM -->
+
+                <form
+                    id="login-form"
+                    class="auth-form"
+                >
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="trainer@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="password-field">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-password-toggle="password"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ERROR MESSAGE -->
+
+                    <div
+                        id="login-error"
+                        class="form-message form-error hidden"
+                        role="alert"
+                    ></div>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <div
+                        id="login-success"
+                        class="form-message form-success hidden"
+                    ></div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+                        Log In
+                    </button>
+
+                </form>
+
+
+                <!-- CREATE ACCOUNT -->
+
+                <div class="auth-footer">
+
+                    <p>
+                        Don't have a Trainer account?
+                        <a href="signup.html">
+                            Create Account
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDE INFORMATION -->
+
+            <aside class="auth-info">
+
+                <p class="auth-eyebrow">
+                    Continue Your Journey
+                </p>
+
+                <h2>
+                    Your Adventure<br>
+                    Is Waiting.
+                </h2>
+
+                <p>
+                    Return to your Trainer, Pokémon,
+                    badges, regions, and adventures across
+                    the Pokémon world.
+                </p>
+
+
+                <div class="auth-journey">
+
+                    <div class="journey-step">
+
+                        <span>01</span>
+
+                        <div>
+                            <strong>Log In</strong>
+                            <p>
+                                Access your Trainer account.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="journey-step">
+
+                        <span>02</span>
+
+                        <div>
+                            <strong>Load Your Trainer</strong>
+                            <p>
+                                Your saved Trainer data is restored.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="journey-step">
+
+                        <span>03</span>
+
+                        <div>
+                            <strong>Continue Your Journey</strong>
+                            <p>
+                                Pick up right where you left off.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            PKMN Voyage
+        </p>
+
+        <p>
+            PKMN Voyage is a fan-made project and is not affiliated with,
+            endorsed by, or sponsored by Nintendo, Game Freak, or
+            The Pokémon Company.
+        </p>
+
+    </footer>
+
+
+    <script src="main.js"></script>
+    <script type="module" src="login.js"></script>
+
+</body>
+
+</html>
