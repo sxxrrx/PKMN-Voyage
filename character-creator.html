@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Create your PKMN Voyage Trainer and prepare for your journey."
+    >
+
+    <title>Create Your Trainer | PKMN Voyage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="character-page">
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div class="logo">
+            <a href="index.html">
+                <h1>PKMN Voyage</h1>
+            </a>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+
+            <button
+                id="logout-button"
+                class="nav-button"
+                type="button"
+            >
+                Log Out
+            </button>
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         CHARACTER CREATION
+    ====================================================== -->
+
+    <main class="character-main">
+
+        <section class="character-section">
+
+
+            <!-- =================================================
+                 PAGE HEADING
+            ================================================== -->
+
+            <div class="character-heading">
+
+                <p class="auth-eyebrow">
+                    Trainer Setup
+                </p>
+
+                <h2>
+                    Create Your Trainer
+                </h2>
+
+                <p>
+                    Every great Pokémon journey begins with a Trainer.
+                    Your adventure across the Pokémon world starts here.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 CHARACTER CREATOR LAYOUT
+            ================================================== -->
+
+            <div class="character-layout">
+
+
+                <!-- =============================================
+                     TRAINER PREVIEW
+                ============================================== -->
+
+                <section class="trainer-preview-card">
+
+                    <div class="trainer-preview-header">
+
+                        <p class="auth-eyebrow">
+                            Trainer Preview
+                        </p>
+
+                        <h3 id="trainer-name-display">
+                            Loading Trainer...
+                        </h3>
+
+                    </div>
+
+
+                    <div class="trainer-preview">
+
+                        <div
+                            class="trainer-sprite-placeholder"
+                            aria-label="Trainer sprite preview placeholder"
+                        >
+
+                            <span>
+                                Trainer Sprite
+                            </span>
+
+                            <small>
+                                Character customization coming soon.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="trainer-origin">
+
+                        <span class="trainer-origin-label">
+                            Home Region
+                        </span>
+
+                        <strong id="home-region-display">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =============================================
+                     CUSTOMIZATION PANEL
+                ============================================== -->
+
+                <section class="trainer-customization-card">
+
+                    <p class="auth-eyebrow">
+                        Appearance
+                    </p>
+
+                    <h3>
+                        Customize Your Trainer
+                    </h3>
+
+                    <p class="character-description">
+                        Full Trainer customization is being prepared.
+                        Soon you'll be able to choose your sprite,
+                        hairstyle, hair color, eye color, and more.
+                    </p>
+
+
+                    <!-- FUTURE BASE SPRITE -->
+
+                    <div class="customization-group disabled-customization">
+
+                        <div class="customization-heading">
+
+                            <strong>
+                                Trainer Base
+                            </strong>
+
+                            <span>
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                        <div class="placeholder-options">
+
+                            <button type="button" disabled>
+                                Male
+                            </button>
+
+                            <button type="button" disabled>
+                                Female
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FUTURE HAIRSTYLES -->
+
+                    <div class="customization-group disabled-customization">
+
+                        <div class="customization-heading">
+
+                            <strong>
+                                Hairstyle
+                            </strong>
+
+                            <span>
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                        <div class="placeholder-options">
+
+                            <button type="button" disabled>
+                                Style 01
+                            </button>
+
+                            <button type="button" disabled>
+                                Style 02
+                            </button>
+
+                            <button type="button" disabled>
+                                Style 03
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FUTURE HAIR COLOR -->
+
+                    <div class="customization-group disabled-customization">
+
+                        <div class="customization-heading">
+
+                            <strong>
+                                Hair Color
+                            </strong>
+
+                            <span>
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                        <div class="color-placeholder-row">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FUTURE EYE COLOR -->
+
+                    <div class="customization-group disabled-customization">
+
+                        <div class="customization-heading">
+
+                            <strong>
+                                Eye Color
+                            </strong>
+
+                            <span>
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                        <div class="color-placeholder-row">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         CONTINUE
+                    ========================================== -->
+
+                    <div class="character-actions">
+
+                        <button
+                            id="continue-button"
+                            type="button"
+                            class="auth-submit"
+                        >
+                            Continue
+                        </button>
+
+                        <small>
+                            Character customization will be added later.
+                            You can continue using the temporary Trainer profile.
+                        </small>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            PKMN Voyage
+        </p>
+
+        <p>
+            PKMN Voyage is a fan-made project and is not affiliated with,
+            endorsed by, or sponsored by Nintendo, Game Freak, or
+            The Pokémon Company.
+        </p>
+
+    </footer>
+
+
+    <script src="main.js"></script>
+    <script
+        type="module"
+        src="character-creator.js"
+    ></script>
+
+</body>
+
+</html>
