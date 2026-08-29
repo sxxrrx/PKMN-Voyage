@@ -1,0 +1,674 @@
+/* =========================================================
+   PKMN VOYAGE
+   Global Styles
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. COLOR & DESIGN VARIABLES
+   --------------------------------------------------------- */
+
+:root {
+    /* Main brand colors */
+    --voyage-blue: #2f6fdb;
+    --voyage-blue-dark: #1e4f9e;
+    --voyage-blue-light: #6fa8ff;
+
+    --voyage-gold: #f2c94c;
+    --voyage-gold-dark: #c99b22;
+
+    /* Backgrounds */
+    --background: #f4f7fb;
+    --surface: #ffffff;
+    --surface-soft: #eaf1fa;
+
+    /* Text */
+    --text-primary: #1e293b;
+    --text-secondary: #5f6f82;
+    --text-light: #ffffff;
+
+    /* Borders */
+    --border: #d7e0ea;
+    --border-dark: #9aabba;
+
+    /* Feedback colors */
+    --success: #3fa66b;
+    --warning: #e6a23c;
+    --danger: #d9534f;
+
+    /* Shadows */
+    --shadow-small: 0 2px 6px rgba(20, 40, 70, 0.12);
+    --shadow-medium: 0 6px 18px rgba(20, 40, 70, 0.16);
+    --shadow-large: 0 12px 30px rgba(20, 40, 70, 0.2);
+
+    /* Shape */
+    --radius-small: 6px;
+    --radius-medium: 12px;
+    --radius-large: 18px;
+
+    /* Layout */
+    --page-width: 1200px;
+
+    /* Animation */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.25s ease;
+}
+
+
+/* ---------------------------------------------------------
+   2. RESET
+   --------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ---------------------------------------------------------
+   3. BODY
+   --------------------------------------------------------- */
+
+body {
+    background: var(--background);
+    color: var(--text-primary);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   4. TYPOGRAPHY
+   --------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+strong {
+    color: var(--text-primary);
+}
+
+
+/* ---------------------------------------------------------
+   5. LINKS
+   --------------------------------------------------------- */
+
+a {
+    color: var(--voyage-blue);
+    text-decoration: none;
+    transition:
+        color var(--transition-fast),
+        opacity var(--transition-fast);
+}
+
+a:hover {
+    color: var(--voyage-blue-dark);
+}
+
+
+/* ---------------------------------------------------------
+   6. GENERAL PAGE LAYOUT
+   --------------------------------------------------------- */
+
+main {
+    width: 100%;
+}
+
+section {
+    padding: 80px 24px;
+}
+
+.container {
+    width: min(100% - 40px, var(--page-width));
+    margin-inline: auto;
+}
+
+
+/* ---------------------------------------------------------
+   7. HEADER / NAVIGATION
+   --------------------------------------------------------- */
+
+header {
+    width: 100%;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-small);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 32px;
+
+    position: relative;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: var(--voyage-blue);
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--voyage-blue);
+}
+
+
+/* ---------------------------------------------------------
+   8. BUTTONS
+   --------------------------------------------------------- */
+
+button,
+.button,
+.hero-buttons a,
+#start > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+    padding: 11px 22px;
+
+    border: 2px solid transparent;
+    border-radius: var(--radius-small);
+
+    background: var(--voyage-blue);
+    color: var(--text-light);
+
+    font-weight: 700;
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow-small);
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+}
+
+button:hover,
+.button:hover,
+.hero-buttons a:hover,
+#start > a:hover {
+    background: var(--voyage-blue-dark);
+    color: var(--text-light);
+
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+button:active,
+.button:active,
+.hero-buttons a:active,
+#start > a:active {
+    transform: translateY(0);
+}
+
+
+/* Secondary button */
+
+.button-secondary {
+    background: var(--surface);
+    color: var(--voyage-blue);
+    border-color: var(--voyage-blue);
+}
+
+.button-secondary:hover {
+    background: var(--surface-soft);
+    color: var(--voyage-blue-dark);
+}
+
+
+/* ---------------------------------------------------------
+   9. PANELS / CARDS
+   --------------------------------------------------------- */
+
+.panel,
+.card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    padding: 24px;
+
+    box-shadow: var(--shadow-small);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+
+/* ---------------------------------------------------------
+   10. FORM ELEMENTS
+   --------------------------------------------------------- */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: var(--surface);
+    color: var(--text-primary);
+
+    border: 2px solid var(--border);
+    border-radius: var(--radius-small);
+
+    outline: none;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--voyage-blue);
+
+    box-shadow:
+        0 0 0 3px rgba(47, 111, 219, 0.15);
+}
+
+label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--text-primary);
+
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   11. HERO FOUNDATION
+   --------------------------------------------------------- */
+
+#hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #dcecff 0%,
+            #f4f7fb 100%
+        );
+}
+
+.hero-content {
+    width: min(760px, 100%);
+    margin-inline: auto;
+}
+
+.hero-content h2 {
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    font-size: 1.1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+
+/* ---------------------------------------------------------
+   12. ABOUT
+   --------------------------------------------------------- */
+
+#about {
+    max-width: 900px;
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 18px;
+}
+
+#about p {
+    font-size: 1.05rem;
+}
+
+
+/* ---------------------------------------------------------
+   13. FEATURES
+   --------------------------------------------------------- */
+
+#features {
+    background: var(--surface-soft);
+}
+
+#features > h2 {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.feature-list {
+    width: min(1100px, 100%);
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.feature-list article {
+    background: var(--surface);
+
+    padding: 26px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    box-shadow: var(--shadow-small);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.feature-list article:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.feature-list h3 {
+    color: var(--voyage-blue);
+    margin-bottom: 10px;
+}
+
+
+/* ---------------------------------------------------------
+   14. REGION JOURNEY
+   --------------------------------------------------------- */
+
+#journey {
+    text-align: center;
+}
+
+#journey h2 {
+    margin-bottom: 32px;
+}
+
+.regions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 10px;
+
+    max-width: 950px;
+    margin: 0 auto 24px;
+}
+
+.regions span {
+    padding: 9px 16px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    color: var(--text-primary);
+    font-weight: 700;
+
+    box-shadow: var(--shadow-small);
+}
+
+
+/* ---------------------------------------------------------
+   15. FINAL CALL TO ACTION
+   --------------------------------------------------------- */
+
+#start {
+    background: var(--voyage-blue);
+    text-align: center;
+}
+
+#start h2 {
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+#start p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 24px;
+}
+
+#start > a {
+    background: var(--voyage-gold);
+    color: #2d2d2d;
+}
+
+#start > a:hover {
+    background: var(--voyage-gold-dark);
+    color: #1d1d1d;
+}
+
+
+/* ---------------------------------------------------------
+   16. FOOTER
+   --------------------------------------------------------- */
+
+footer {
+    padding: 32px 24px;
+
+    background: #182333;
+    color: var(--text-light);
+
+    text-align: center;
+}
+
+footer p {
+    max-width: 800px;
+    margin: 6px auto;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 0.85rem;
+}
+
+
+/* ---------------------------------------------------------
+   17. UTILITY CLASSES
+   --------------------------------------------------------- */
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+
+/* ---------------------------------------------------------
+   18. ACCESSIBILITY
+   --------------------------------------------------------- */
+
+:focus-visible {
+    outline: 3px solid var(--voyage-gold);
+    outline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   19. RESPONSIVE DESIGN
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .feature-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 60px 20px;
+    }
+
+    header {
+        padding: 14px 20px;
+
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #hero {
+        min-height: 520px;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 48px 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .regions span {
+        font-size: 0.9rem;
+    }
+
+}
