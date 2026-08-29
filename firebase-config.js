@@ -8,13 +8,13 @@ import { getDatabase } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-
 // =========================================================
 
 const firebaseConfig = {
-    apiKey: "PASTE_YOUR_FIREBASE_API_KEY_HERE",
+    apiKey: "AIzaSyCn54dHLysy3usauST7L4b4uE2zqu79I64",
     authDomain: "pkmn-voyage.firebaseapp.com",
     databaseURL: "https://pkmn-voyage-default-rtdb.firebaseio.com",
     projectId: "pkmn-voyage",
     storageBucket: "pkmn-voyage.firebasestorage.app",
     messagingSenderId: "794421454639",
-    appId: "PASTE_YOUR_FIREBASE_APP_ID_HERE"
+    appId: "1:794421454639:web:509555a6e6996b2b78e3da"
 };
 
 
