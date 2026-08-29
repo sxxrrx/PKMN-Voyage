@@ -1,68 +1,37 @@
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getDatabase } from "firebase/database";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 
-// Your web app's Firebase configuration
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+
+import { getDatabase } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js";
+
+
+// =========================================================
+// PKMN VOYAGE - FIREBASE
+// =========================================================
+
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "pkmn-voyage.firebaseapp.com",
-  databaseURL: "https://pkmn-voyage-default-rtdb.firebaseio.com",
-  projectId: "pkmn-voyage",
-  storageBucket: "pkmn-voyage.firebasestorage.app",
-  messagingSenderId: "794421454639",
-  appId: "YOUR_APP_ID"
+    apiKey: "YOUR_ACTUAL_API_KEY",
+    authDomain: "pkmn-voyage.firebaseapp.com",
+    databaseURL: "https://pkmn-voyage-default-rtdb.firebaseio.com",
+    projectId: "pkmn-voyage",
+    storageBucket: "pkmn-voyage.firebasestorage.app",
+    messagingSenderId: "794421454639",
+    appId: "YOUR_ACTUAL_APP_ID"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize services
-export const auth = getAuth(app);
-export const db = getDatabase(app);
 
-import {
-    initializeApp
-} from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
-
-import {
-    getAuth
-} from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+// Initialize Firebase services
+const auth = getAuth(app);
+const db = getDatabase(app);
 
 
-const firebaseConfig = {
-
-    apiKey: "YOUR_API_KEY",
-
-    authDomain:
-        "pkmn-voyage.firebaseapp.com",
-
-    databaseURL:
-        "https://pkmn-voyage-default-rtdb.firebaseio.com",
-
-    projectId:
-        "pkmn-voyage",
-
-    storageBucket:
-        "pkmn-voyage.firebasestorage.app",
-
-    messagingSenderId:
-        "794421454639",
-
-    appId:
-        "YOUR_APP_ID"
-
-};
-
-
-const app =
-    initializeApp(firebaseConfig);
-
-
-const auth =
-    getAuth(app);
-
-
+// Make them available to other files
 export {
     app,
-    auth
+    auth,
+    db
 };
